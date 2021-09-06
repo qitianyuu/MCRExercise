@@ -48,7 +48,7 @@ bool is_right_position(int i, int j, char game[3][3]){
     return false;
 }
 // good !
-
+// nice ！
 int  main(){
 //    行、列索引
     int i, j;
