@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string>
 #include<set>
-
+// isWin function
 bool isWin(char game[3][3]){
     bool win = false;
     if (game[0][0] == game[0][1] && game[0][1] == game[0][2] && (game[0][0] == 'X' || game[0][0] == 'O')) win = true;
