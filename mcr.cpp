@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string>
 #include<set>
-// isWin function
+
 bool isWin(char game[3][3]){
     bool win = false;
     if (game[0][0] == game[0][1] && game[0][1] == game[0][2] && (game[0][0] == 'X' || game[0][0] == 'O')) win = true;
@@ -47,15 +47,15 @@ bool is_right_position(int i, int j, char game[3][3]){
     }
     return false;
 }
-// good !
-// nice ！
+
+
 int  main(){
 //    行、列索引
     int i, j;
     //    棋盘
-    //    初始化问题 √
+    //    修改初始化问题 √
     char game[3][3] = {{' ',' ',' '}, {' ',' ',' '}, {' ',' ',' '}}; // Tic-tac-toe
-    //    重复代码 √
+    //    修复重复代码 √
     char player1 = 'X';
     char player2 = 'O';
     bool turn = true; // false for player 1's turn, true for player 2's turn. Player 1 first.
@@ -68,13 +68,14 @@ int  main(){
             std::cout << "Player 1: ";
         else
             std::cout << "Player 2: ";
-        //           输入检测
+        //  增加输入检测
         while(true){
             std::cout << "Which cell to mark? i:[1..3], j:[1..3]: ";
                std::cin >> i >> j;
-            // 输入校验 √
+            // 增加输入校验 √
+//            std::cout << i << j;
             bool flag1 = is_right_input(i, j);
-            // 位置校验 √
+            // 增加位置校验 √
             bool flag2 = is_right_position(i, j, game);
             if(flag1 && flag2){
                break;
@@ -91,7 +92,7 @@ int  main(){
         }
     }
     
-//    判断和棋逻辑错误 √
+//    修复判断和棋逻辑错误 √
     if (n==9 && !isWin(game)) // all celles with i=0 to 2 have been inputted above but no winner yet
        std::cout << "Tie!" << std::endl;
 
